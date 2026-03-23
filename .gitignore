@@ -1733,3 +1733,4 @@
 /vendor/symfony/polyfill-php81/Php81.php
 /vendor/symfony/polyfill-php81/README.md
 /vendor/autoload.php
+secret/firebase-auth.json
