@@ -1,0 +1,399 @@
+/* Unified Admin Button Styles */
+.admin-btn,
+.edit-btn,
+.delete-btn,
+.mini-btn,
+.action-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #6c757d;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+.admin-btn:hover,
+.edit-btn:hover,
+.delete-btn:hover,
+.mini-btn:hover,
+.action-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Active states for all buttons */
+.admin-btn:active,
+.edit-btn:active,
+.delete-btn:active,
+.mini-btn:active,
+.action-btn:active,
+.grid-btn:active,
+.upload-btn:active,
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific button colors */
+.edit-btn {
+    color: #28a745 !important;
+    background: rgba(40, 167, 69, 0.15) !important;
+}
+
+.edit-btn:hover {
+    color: white !important;
+    background: #28a745 !important;
+    box-shadow: 0 3px 8px rgba(40, 167, 69, 0.4) !important;
+}
+
+.edit-btn i {
+    color: inherit !important;
+}
+
+.delete-btn {
+    margin-right: 8px;
+    color: #e74c3c !important;
+    background: rgba(231, 76, 60, 0.15) !important;
+}
+
+.delete-btn:hover {
+    color: white !important;
+    background: #e74c3c !important;
+    box-shadow: 0 3px 8px rgba(231, 76, 60, 0.4) !important;
+}
+
+.delete-btn i {
+    color: inherit !important;
+}
+
+.admin-btn {
+    color: #28a745;
+    background: rgba(40, 167, 69, 0.1);
+}
+
+.admin-btn:hover {
+    color: white;
+    background: #28a745;
+}
+
+/* Mini buttons for compact areas */
+.mini-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+.mini-btn.download-btn {
+    background: rgba(32, 201, 151, 0.15) !important;
+    color: #20c997 !important;
+}
+
+.mini-btn.download-btn:hover {
+    background: #20c997 !important;
+    color: white !important;
+    box-shadow: 0 3px 8px rgba(32, 201, 151, 0.4) !important;
+}
+
+.mini-btn.view-btn {
+    background: rgba(111, 66, 193, 0.15) !important;
+    color: #6f42c1 !important;
+}
+
+.mini-btn.view-btn:hover {
+    background: #6f42c1 !important;
+    color: white !important;
+    box-shadow: 0 3px 8px rgba(111, 66, 193, 0.4) !important;
+}
+
+/* Grid buttons for card layouts */
+.grid-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.grid-btn:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Play buttons - Blue */
+.grid-btn.play-btn,
+.mini-btn.play-btn {
+    background: rgba(0, 123, 255, 0.15) !important;
+    color: #007bff !important;
+}
+
+.grid-btn.play-btn:hover,
+.mini-btn.play-btn:hover {
+    background: #007bff !important;
+    color: white !important;
+    box-shadow: 0 3px 8px rgba(0, 123, 255, 0.4) !important;
+}
+
+/* Edit buttons - Green */
+.grid-btn.edit-btn,
+.mini-btn.edit-btn {
+    background: #28a745;
+    color: white;
+}
+
+.grid-btn.edit-btn:hover,
+.mini-btn.edit-btn:hover {
+    background: #218838;
+}
+
+.grid-btn.view-btn {
+    background: rgba(111, 66, 193, 0.15) !important;
+    color: #6f42c1 !important;
+}
+
+.grid-btn.view-btn:hover {
+    background: #6f42c1 !important;
+    color: white !important;
+    box-shadow: 0 3px 8px rgba(111, 66, 193, 0.4) !important;
+}
+
+.grid-btn.download-btn {
+    background: rgba(32, 201, 151, 0.15) !important;
+    color: #20c997 !important;
+}
+
+.grid-btn.download-btn:hover {
+    background: #20c997 !important;
+    color: white !important;
+    box-shadow: 0 3px 8px rgba(32, 201, 151, 0.4) !important;
+}
+
+.grid-btn.delete-btn {
+    background: rgba(231, 76, 60, 0.15) !important;
+    color: #e74c3c !important;
+}
+
+.grid-btn.delete-btn:hover {
+    background: #e74c3c !important;
+    color: white !important;
+    box-shadow: 0 3px 8px rgba(231, 76, 60, 0.4) !important;
+}
+
+.grid-btn.delete-btn i {
+    color: inherit !important;
+}
+
+/* Action button groups */
+.category-admin-actions,
+.doc-actions,
+.subfolder-stats,
+.list-actions-grid,
+.test-actions-grid,
+.document-actions-grid {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.add-subfolder-btn,
+.add-pdf-subfolder-btn,
+.add-edo-subfolder-btn {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%) !important;
+    color: white !important;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(23, 162, 184, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.add-subfolder-btn:hover,
+.add-pdf-subfolder-btn:hover,
+.add-edo-subfolder-btn:hover {
+    background: linear-gradient(135deg, #138496 0%, #117a8b 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(23, 162, 184, 0.4);
+}
+
+.add-subfolder-btn i,
+.add-pdf-subfolder-btn i,
+.add-edo-subfolder-btn i {
+    font-size: 14px;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+}
+
+/* Upload and form buttons */
+.upload-btn,
+.edo-upload-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.upload-btn:hover,
+.edo-upload-btn:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal action buttons */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Disabled state for all buttons */
+.admin-btn:disabled,
+.edit-btn:disabled,
+.delete-btn:disabled,
+.mini-btn:disabled,
+.action-btn:disabled,
+.grid-btn:disabled,
+.upload-btn:disabled,
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Focus states for accessibility */
+.admin-btn:focus,
+.edit-btn:focus,
+.delete-btn:focus,
+.mini-btn:focus,
+.action-btn:focus,
+.grid-btn:focus,
+.upload-btn:focus,
+.btn:focus {
+    outline: 2px solid rgba(0, 123, 255, 0.5);
+    outline-offset: 2px;
+}
+
+.doc-count {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    min-width: 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.doc-count:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .admin-btn,
+    .edit-btn,
+    .delete-btn,
+    .action-btn {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    .mini-btn {
+        padding: 6px 10px;
+        font-size: 14px;
+        min-width: 28px;
+        min-height: 28px;
+    }
+
+    .grid-btn {
+        padding: 10px 14px;
+        font-size: 14px;
+        min-width: 36px;
+        min-height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .category-admin-actions,
+    .doc-actions,
+    .subfolder-stats {
+        gap: 4px;
+    }
+
+    .admin-btn,
+    .edit-btn,
+    .delete-btn {
+        padding: 6px 8px;
+    }
+}

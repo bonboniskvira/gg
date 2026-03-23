@@ -1,0 +1,91 @@
+/* Marketing Folder Specific Styles */
+.marketing-folder {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+.marketing-folder:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.marketing-folder-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.marketing-folder-header:hover {
+    background: #f1f3f4;
+}
+
+.marketing-folder-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.folder-icon {
+    color: #f39c12;
+    margin-right: 15px;
+}
+
+.folder-toggle {
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+    will-change: transform;
+}
+
+.marketing-folder.open .folder-toggle {
+    transform: rotate(180deg);
+}
+
+.marketing-folder-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s;
+    background: white;
+    will-change: max-height, padding;
+}
+
+.marketing-folder.open .marketing-folder-content {
+    max-height: 500px;
+    padding: 15px 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* File List Specific Styles */
+.file-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.file-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.file-item:hover {
+    background: #f8f9fa;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .marketing-folder-header {
+        padding: 12px 15px;
+    }
+    
+    .marketing-folder.open .marketing-folder-content {
+        padding: 12px 15px;
+    }
+}

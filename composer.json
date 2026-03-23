@@ -1,0 +1,9 @@
+{
+    "name": "bonboniskvira/edo",
+    "description": "EDO System",
+    "require": {
+        "php": ">=8.2",
+        "kreait/firebase-php": "^5.26"
+
+    }
+}

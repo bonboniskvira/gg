@@ -1,0 +1,813 @@
+/* Marketing Page Styling */
+
+
+#marketing .content-area {
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    gap: 30px;
+
+
+}
+
+
+
+
+
+/* Upload Container */
+
+
+.marketing-upload-container {
+
+
+    background: white;
+
+
+    border-radius: 10px;
+
+
+    padding: 25px;
+
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+
+
+
+.marketing-upload-container h2 {
+
+
+    color: #2c3e50;
+
+
+    margin-top: 0;
+
+
+    margin-bottom: 20px;
+
+
+    font-size: 20px;
+
+
+}
+
+
+
+
+
+.marketing-upload-form {
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    gap: 15px;
+
+
+}
+
+
+
+
+
+.input-group {
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    gap: 5px;
+
+
+}
+
+
+
+
+
+.input-group label {
+
+
+    font-weight: 600;
+
+
+    color: #34495e;
+
+
+}
+
+
+
+
+
+.input-group input[type="text"] {
+
+
+    width: 100%;
+
+
+    padding: 12px;
+
+
+    border: 1px solid #ddd;
+
+
+    border-radius: 5px;
+
+
+    font-size: 16px;
+
+
+}
+
+
+
+
+
+.input-group input[type="button"] {
+
+
+    display: none;
+
+
+}
+
+
+
+
+
+.input-group input[type="file"] {
+
+
+    padding: 10px 0;
+
+
+}
+
+
+
+
+
+.marketing-upload-btn {
+
+
+    background: #3498db;
+
+
+    color: white;
+
+
+    border: none;
+
+
+    padding: 12px 20px;
+
+
+    border-radius: 5px;
+
+
+    font-size: 16px;
+
+
+    cursor: pointer;
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    justify-content: center;
+
+
+    gap: 8px;
+
+
+    transition: background 0.2s;
+
+
+    margin-top: 10px;
+
+
+    font-weight: 600;
+
+
+}
+
+
+
+
+
+.marketing-upload-btn:hover {
+
+
+    background: #2980b9;
+
+
+}
+
+
+
+
+
+/* Folders Container */
+
+
+.marketing-folder-container {
+
+
+    background: white;
+
+
+    border-radius: 10px;
+
+
+    padding: 25px;
+
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+
+
+
+.marketing-folder-container h2 {
+
+
+    color: #2c3e50;
+
+
+    margin-top: 0;
+
+
+    margin-bottom: 20px;
+
+
+    font-size: 20px;
+
+
+}
+
+
+
+
+
+.marketing-folder-grid {
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    gap: 15px;
+
+
+}
+
+
+
+
+
+/* Folder Styling */
+
+
+.marketing-folder {
+
+
+    border: 1px solid #e0e0e0;
+
+
+    border-radius: 8px;
+
+
+    overflow: hidden;
+
+
+    transition: all 0.3s ease;
+
+
+    will-change: transform, box-shadow;
+
+
+}
+
+
+
+
+
+.marketing-folder:hover {
+
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+
+}
+
+
+
+
+
+.marketing-folder-header {
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    padding: 15px 20px;
+
+
+    background: #f8f9fa;
+
+
+    cursor: pointer;
+
+
+    transition: background 0.2s;
+
+
+}
+
+
+
+
+
+.marketing-folder-header:hover {
+
+
+    background: #f1f3f4;
+
+
+}
+
+
+
+
+
+.folder-icon {
+
+
+    font-size: 24px;
+
+
+    color: #f39c12;
+
+
+    margin-right: 15px;
+
+
+}
+
+
+
+
+
+.folder-info {
+
+
+    flex: 1;
+
+
+}
+
+
+
+
+
+.folder-info h3 {
+
+
+    margin: 0 0 3px 0;
+
+
+    font-size: 18px;
+
+
+    color: #2c3e50;
+
+
+}
+
+
+
+
+
+.file-count {
+
+
+    font-size: 14px;
+
+
+    color: #7f8c8d;
+
+
+}
+
+
+
+
+
+.folder-toggle {
+
+
+    color: #95a5a6;
+
+
+    transform: rotate(0deg);
+
+
+    transition: transform 0.3s;
+
+
+    will-change: transform;
+
+
+}
+
+
+
+
+
+.marketing-folder.open .folder-toggle {
+
+
+    transform: rotate(180deg);
+
+
+}
+
+
+
+
+
+/* Folder Content */
+
+
+.marketing-folder-content {
+
+
+    max-height: 0;
+
+
+    overflow: hidden;
+
+
+    transition: max-height 0.3s ease-in-out, padding 0.3s;
+
+
+    background: white;
+
+
+    will-change: max-height, padding;
+
+
+}
+
+
+
+
+
+.marketing-folder.open .marketing-folder-content {
+
+
+    max-height: 500px;
+
+
+    padding: 15px 20px;
+
+
+    border-top: 1px solid #e0e0e0;
+
+
+}
+
+
+
+
+
+.empty-folder {
+
+
+    padding: 10px;
+
+
+    color: #95a5a6;
+
+
+    text-align: center;
+
+
+    font-style: italic;
+
+
+}
+
+
+
+
+
+/* File List */
+
+
+.file-list {
+
+
+    list-style-type: none;
+
+
+    padding: 0;
+
+
+    margin: 0;
+
+
+}
+
+
+
+
+
+.file-item {
+
+
+    padding: 10px;
+
+
+    margin-bottom: 5px;
+
+
+    border-radius: 4px;
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    transition: background 0.2s;
+
+
+}
+
+
+
+
+
+.file-item:hover {
+
+
+    background: #f8f9fa;
+
+
+}
+
+
+
+
+
+.file-item i {
+
+
+    margin-right: 10px;
+
+
+    font-size: 18px;
+
+
+}
+
+
+
+
+
+.file-item a {
+
+
+    color: #2980b9;
+
+
+    text-decoration: none;
+
+
+}
+
+
+
+
+
+.file-item a:hover {
+
+
+    text-decoration: underline;
+
+
+}
+
+
+
+
+
+/* File icons */
+
+
+.fa-file-pdf { color: #e74c3c; }
+
+
+.fa-file-word { color: #3498db; }
+
+
+.fa-file-excel { color: #2ecc71; }
+
+
+.fa-file-image { color: #9b59b6; }
+
+
+.fa-file-archive { color: #f39c12; }
+
+
+
+
+
+/* No folders message */
+
+
+.no-folders {
+
+
+    display: flex;
+
+
+    flex-direction: column;
+
+
+    align-items: center;
+
+
+    padding: 30px 0;
+
+
+    color: #95a5a6;
+
+
+}
+
+
+
+
+
+.no-folders i {
+
+
+    font-size: 48px;
+
+
+    margin-bottom: 15px;
+
+
+    opacity: 0.5;
+
+
+}
+
+
+
+
+
+/* Hide file input but show selected files */
+
+
+.hidden-file-input {
+
+
+    width: 0.1px;
+
+
+    height: 0.1px;
+
+
+    opacity: 0;
+
+
+    overflow: hidden;
+
+
+    position: absolute;
+
+
+    z-index: -1;
+
+
+}
+
+
+
+
+
+.custom-file-button {
+
+
+    display: inline-block;
+
+
+    padding: 10px 15px;
+
+
+    background: #3498db;
+
+
+    color: white;
+
+
+    border-radius: 5px;
+
+
+    cursor: pointer;
+
+
+    font-weight: 500;
+
+
+    transition: background 0.2s;
+
+
+}
+
+
+
+
+
+.custom-file-button:hover {
+
+
+    background: #2980b9;
+
+
+}
+
+
+
+
+
+.selected-files-info {
+
+
+    margin-top: 8px;
+
+
+    font-size: 14px;
+
+
+    color: #34495e;
+
+
+    padding: 5px;
+
+
+}
+
+
+
+
+
+/* Responsive adjustments */
+
+
+@media (max-width: 768px) {
+
+
+    .marketing-upload-form {
+
+
+        flex-direction: column;
+
+
+    }
+
+
+}
+
+

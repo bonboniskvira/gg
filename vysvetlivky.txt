@@ -1,0 +1,25 @@
+
+
+
+ Upravena JS funkce pro mazání kategorie dokumentů, aby se zobrazila potvrzovací zpráva a po úspěšném smazání se stránka automaticky obnovila.
+
+ function deleteDocumentCategory(categoryKey) {
+        if (event) event.stopPropagation();
+        if (confirm(`Smazat kategorii "${categoryKey}" a všechny soubory?`)) {
+            const formData = new FormData();
+            formData.append('category', categoryKey);
+            formData.append('type', 'doc');
+
+            fetch('delete-category-handler.php', { method: 'POST', body: formData })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showStatusMessage('success', data.message);
+                        setTimeout(() => location.reload(), 500);
+                    } else {
+                        showStatusMessage('error', data.message);
+                    }
+                })
+                .catch(error => showStatusMessage('error', 'Chyba při mazání kategorie.'));
+        }
+    }
